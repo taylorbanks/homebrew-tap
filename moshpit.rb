@@ -5,21 +5,21 @@
 class Moshpit < Formula
   desc "A terminal-based SSH/Mosh manager with protocol flexibility and roaming connection support"
   homepage "https://github.com/taylorbanks/moshpit"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.0/moshpit_Darwin_x86_64.tar.gz"
-      sha256 "9147fdbaf892c06deac4a18e3f7eed84037a708f0543ce892f9df8caa1ebb3dd"
+      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.1/moshpit_Darwin_x86_64.tar.gz"
+      sha256 "9f5210990be047628c60d7099e6f98ba8a260c5e95e62dea64628eddfb7b06aa"
 
       define_method(:install) do
         bin.install "moshpit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.0/moshpit_Darwin_arm64.tar.gz"
-      sha256 "e5787efd756e8f3d0105f3d8b8a9152df572f09777a804c173cd1031827d1235"
+      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.1/moshpit_Darwin_arm64.tar.gz"
+      sha256 "528702872fbf4e10593f36ef54f6e76cc9833088133d143aa377ab876bc3ec3c"
 
       define_method(:install) do
         bin.install "moshpit"
@@ -29,22 +29,22 @@ class Moshpit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.0/moshpit_Linux_x86_64.tar.gz"
-      sha256 "af4c986921ecdb6266b36b0ae6162051548b67fe9ea27c858d55e984622ef265"
+      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.1/moshpit_Linux_x86_64.tar.gz"
+      sha256 "bd2964fe99ad6bac4630844536406dbe5e47464a81baea023eb96313e9aaa9c6"
       define_method(:install) do
         bin.install "moshpit"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.0/moshpit_Linux_armv6.tar.gz"
-      sha256 "9b0528541a9b972986ccc65b9df3a85feaae8368f138aec4903faa4ac6ed0df2"
+      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.1/moshpit_Linux_armv6.tar.gz"
+      sha256 "8f197a00380674d801137dc3a81cc6adb7a2d704a2fc89105a551fe0a1bc5f25"
       define_method(:install) do
         bin.install "moshpit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.0/moshpit_Linux_arm64.tar.gz"
-      sha256 "6bf1b12787ceaf658eab15a8c9b3be017febd48794ef1f9094a7989b666a7342"
+      url "https://github.com/taylorbanks/moshpit/releases/download/v0.2.1/moshpit_Linux_arm64.tar.gz"
+      sha256 "b33e972977fe7eecd3d165656e5118ecd2e71f8b8a6dab4e9294aa087c01384f"
       define_method(:install) do
         bin.install "moshpit"
       end
